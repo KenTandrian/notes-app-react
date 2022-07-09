@@ -57,7 +57,6 @@ input::placeholder, textarea::placeholder {
 .note-input {
   margin: 0 auto;
   max-width: 800px;
-  margin-bottom: 48px;
 }
 
 .note-input input, .note-input textarea {
@@ -139,6 +138,9 @@ input::placeholder, textarea::placeholder {
 .note-item__body {
   font-size: 14px;
   line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .note-item__action {
@@ -181,13 +183,51 @@ input::placeholder, textarea::placeholder {
   text-align: center;
 }
 
-@media only screen and (min-width: 500px) {
+.note-body__heading {
+  text-align: center;
+}
+
+.note-body__add-note-button {
+  border: 1px solid #aaa;
+  color: #fff263;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  padding: 12px 10px;
+  margin-bottom: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  width: 300px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
   .notes-list {
     grid-template-columns: 1fr 1fr;
   }
+
+  .ReactModal__Content, .ReactModal__Content--after-open {
+    width: 300px;
+  }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
   .notes-list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -195,10 +235,22 @@ input::placeholder, textarea::placeholder {
   .note-search input {
     min-width: 400px;
   }
+
+  .ReactModal__Content, .ReactModal__Content--after-open {
+    width: 600px;
+  }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1200px) {
   .notes-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ReactModal__Content, .ReactModal__Content--after-open {
+    width: 850px;
+  }
+
+  .note-search input {
+    min-width: 400px;
   }
 }

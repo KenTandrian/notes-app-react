@@ -5,7 +5,7 @@ const toastId1 = 'toast-1';
 const toastId2 = 'toast-2';
 const toastId3 = 'toast-3';
 
-const NotesInput = ({ addNewNote }) => {
+const NotesInput = ({ addNewNote, closeModal }) => {
     const [formData, setFormData] = useState({
         title: '',
         noteBody: '',
@@ -53,8 +53,10 @@ const NotesInput = ({ addNewNote }) => {
                 setFormData({
                     ...formData,
                     title: '',
-                    noteBody: ''
+                    noteBody: '',
+                    noteBodyLength: 0
                 })
+                closeModal();
             } else {
                 toast.error('New note failed to save!');
             }

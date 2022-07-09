@@ -12,7 +12,8 @@ class NotesApp extends React.Component {
         super(props);
 
         this.state = {
-            notes: getInitialData() 
+            notes: getInitialData(),
+            unfilteredNotes: getInitialData()
         }
         this.addNewNoteHandler = this.addNewNoteHandler.bind(this);
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -24,10 +25,8 @@ class NotesApp extends React.Component {
         try {
             this.setState((prevState) => {
                 return {
-                    notes: [
-                        ...prevState.notes,
-                        newNoteData
-                    ]
+                    notes: [ newNoteData, ...prevState.notes, ],
+                    unfilteredNotes: [ newNoteData, ...prevState.unfilteredNotes, ]
                 }
             })
             return {
@@ -44,23 +43,33 @@ class NotesApp extends React.Component {
     }
 
     onDeleteHandler(id) {
-        this.setState((prevState) => {
-            return {
-                notes: prevState.notes.filter(note => note.id !== id)
-            }
-        })
-        toast.success('Note deleted!');
+        const result = window.confirm('Are you sure you want to delete this?');
+        if (result) {
+            this.setState((prevState) => {
+                return {
+                    notes: prevState.notes.filter(note => note.id !== id),
+                    unfilteredNotes: prevState.unfilteredNotes.filter(note => note.id !== id),
+                }
+            })
+            toast.success('Note deleted!');
+        } else {
+            toast.error('Deletion cancelled!');
+        }
     }
 
     onArchiveHandler(id) {
-        const noteToModify = this.state.notes.filter(note => note.id === id)[0];
+        const noteToModify = this.state.unfilteredNotes.filter(note => note.id === id)[0];
         const modifiedNote = { ...noteToModify, archived: !noteToModify.archived };
         this.setState((prevState) => {
             return {
                 notes: [
                     ...prevState.notes.filter(note => note.id !== id),
                     modifiedNote
-                ]
+                ],
+                unfilteredNotes: [
+                    ...prevState.unfilteredNotes.filter(note => note.id !== id),
+                    modifiedNote
+                ],
             }
         });
         if (noteToModify.archived) {
@@ -73,11 +82,11 @@ class NotesApp extends React.Component {
     onSearchHandler(text) {
         if (text.length !== 0 && text.trim() !== '') {
             this.setState({
-                notes: getInitialData().filter(note => note.title.toLowerCase().includes(text.toLowerCase())),
+                notes: this.state.unfilteredNotes.filter(note => note.title.toLowerCase().includes(text.toLowerCase())),
             })
         } else {
             this.setState({
-                notes: getInitialData(),
+                notes: this.state.unfilteredNotes,
             })
         }
     }
