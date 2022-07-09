@@ -19,7 +19,7 @@ This project is made as a project for a class in Dicoding Indonesia, which is a 
 
 ## Dependencies
 [![react](https://img.shields.io/github/package-json/dependency-version/KenTandrian/notes-app-react/react)](https://www.npmjs.com/package/react)
-[![react-router-dom](https://img.shields.io/github/package-json/dependency-version/KenTandrian/notes-app-react/react-router-dom)](https://www.npmjs.com/package/react-router-dom)
+[![react-dom](https://img.shields.io/github/package-json/dependency-version/KenTandrian/notes-app-react/react-dom)](https://www.npmjs.com/package/react-dom)
 [![react-toastify](https://img.shields.io/github/package-json/dependency-version/KenTandrian/notes-app-react/react-toastify)](https://www.npmjs.com/package/react-toastify)
 
 [Go to List of Dependencies](https://github.com/KenTandrian/notes-app-react/network/dependencies)
