@@ -1,15 +1,14 @@
 import React from "react";
 import NoteItem from "./NoteItem";
 
-const ArchivedNotes = ({ notesList, onDelete, onArchive }) => {
+const NotesList = ({ notesList, onDelete, onArchive }) => {
     return (
         <>
-            <h2>Archive</h2>
             { notesList.length !== 0 ?
                 <div className="notes-list">
                 {
                     notesList.map(item => (
-                        <NoteItem key={item.id} note={item} onDelete={onDelete} onArchive={onArchive}/>
+                        <NoteItem key={item.id} note={item} onDelete={onDelete} onArchive={onArchive} />
                     ))
                 }
                 </div> :
@@ -19,4 +18,4 @@ const ArchivedNotes = ({ notesList, onDelete, onArchive }) => {
     )
 }
 
-export default ArchivedNotes;
+export default NotesList;

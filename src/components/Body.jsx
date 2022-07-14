@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ActiveNotes from "./ActiveNotes";
-import ArchivedNotes from "./ArchivedNotes";
+import NotesList from "./NotesList";
 import NotesInput from "./NotesInput";
 import Modal from 'react-modal';
 
@@ -50,8 +49,10 @@ const AppBody = ({ notes, addNewNote, onDelete, onArchive }) => {
             >
                 <NotesInput addNewNote={addNewNote} closeModal={closeModal}/>
             </Modal>
-            <ActiveNotes notesList={notes.filter(note => note.archived === false)} onDelete={onDelete} onArchive={onArchive} />
-            <ArchivedNotes notesList={notes.filter(note => note.archived === true)} onDelete={onDelete} onArchive={onArchive} />
+            <h2>Active Notes</h2>
+            <NotesList notesList={notes.filter(note => note.archived === false)} onDelete={onDelete} onArchive={onArchive} />
+            <h2>Archive</h2>
+            <NotesList notesList={notes.filter(note => note.archived === true)} onDelete={onDelete} onArchive={onArchive} />
         </div>
     );
 }
