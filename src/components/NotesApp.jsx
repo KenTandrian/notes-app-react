@@ -1,11 +1,13 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { getInitialData } from '../utils/data';
+
 import AppBody from './Body';
 import Header from './Header';
+import Footer from './Footer';
 
 import 'react-toastify/dist/ReactToastify.min.css';
-import Footer from './Footer';
+import autoBind from 'auto-bind';
 
 class NotesApp extends React.Component {
     constructor(props) {
@@ -15,10 +17,7 @@ class NotesApp extends React.Component {
             notes: getInitialData(),
             unfilteredNotes: getInitialData()
         }
-        this.addNewNoteHandler = this.addNewNoteHandler.bind(this);
-        this.onDeleteHandler = this.onDeleteHandler.bind(this);
-        this.onArchiveHandler = this.onArchiveHandler.bind(this);
-        this.onSearchHandler = this.onSearchHandler.bind(this);
+        autoBind(this);
     }
 
     addNewNoteHandler(newNoteData) {
