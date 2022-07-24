@@ -16,7 +16,7 @@ const NoteItem = ({ note, onDelete, onArchive }) => {
                 {
                     note.archived === false ?
                     <button className="note-item__archive-button" onClick={onArchiveClick}>Archive</button> :
-                    <button className="note-item__archive-button" onClick={onArchiveClick}>Move</button>
+                    <button className="note-item__archive-button" onClick={onArchiveClick}>Unarchive</button>
                 }
                 <button className="note-item__delete-button" onClick={onDeleteClick}>Delete</button>
             </div>
