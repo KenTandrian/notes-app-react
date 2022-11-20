@@ -10,19 +10,29 @@ body {
   color: white;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 12px;
   margin: 12px 0;
   font-family: 'Inter', sans-serif;
   background-color: transparent;
   color: white;
-  border: 1px solid #aaa;
+  border: none;
   border-radius: 4px;
 }
 
-input::placeholder, textarea::placeholder {
+input:focus {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
   color: #aaa;
   font-weight: bold;
+}
+
+#search-icon {
+  margin-bottom: -6px;
 }
 
 .note-app__header {
@@ -31,7 +41,7 @@ input::placeholder, textarea::placeholder {
   justify-content: center;
   padding: 4px 30px;
   border-bottom: 1px solid #aaa;
-  position: sticky; 
+  position: sticky;
   top: 0;
   background-color: #202124;
 }
@@ -59,7 +69,8 @@ input::placeholder, textarea::placeholder {
   max-width: 800px;
 }
 
-.note-input input, .note-input textarea {
+.note-input input,
+.note-input textarea {
   display: block;
   width: 100%;
 }
@@ -147,7 +158,8 @@ input::placeholder, textarea::placeholder {
   display: flex;
 }
 
-.note-item__delete-button,.note-item__archive-button {
+.note-item__delete-button,
+.note-item__archive-button {
   display: block;
   width: 100%;
   background-color: transparent;
@@ -205,11 +217,11 @@ input::placeholder, textarea::placeholder {
   transition: opacity 200ms ease-in-out;
 }
 
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
   opacity: 1;
 }
 
-.ReactModal__Overlay--before-close{
+.ReactModal__Overlay--before-close {
   opacity: 0;
 }
 
@@ -222,7 +234,8 @@ input::placeholder, textarea::placeholder {
     grid-template-columns: 1fr 1fr;
   }
 
-  .ReactModal__Content, .ReactModal__Content--after-open {
+  .ReactModal__Content,
+  .ReactModal__Content--after-open {
     width: 300px;
   }
 }
@@ -236,7 +249,8 @@ input::placeholder, textarea::placeholder {
     min-width: 400px;
   }
 
-  .ReactModal__Content, .ReactModal__Content--after-open {
+  .ReactModal__Content,
+  .ReactModal__Content--after-open {
     width: 600px;
   }
 }
@@ -246,7 +260,8 @@ input::placeholder, textarea::placeholder {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .ReactModal__Content, .ReactModal__Content--after-open {
+  .ReactModal__Content,
+  .ReactModal__Content--after-open {
     width: 850px;
   }
 
