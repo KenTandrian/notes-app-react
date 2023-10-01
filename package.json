@@ -46,7 +46,7 @@
   },
   "overrides": {
     "react-scripts": {
-      "@svgr/webpack": "^8.0.1"
+      "@svgr/webpack": "^8.1.0"
     }
   }
 }
