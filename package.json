@@ -1,7 +1,7 @@
 {
   "name": "personal-notes-app",
   "homepage": "https://kentandrian.github.io/notes-app-react/",
-  "version": "0.1.65",
+  "version": "0.1.69",
   "private": true,
   "type": "module",
   "scripts": {
