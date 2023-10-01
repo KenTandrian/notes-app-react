@@ -15,7 +15,7 @@ This project is made as a project for a class in Dicoding Indonesia, which is a 
 [![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=for-the-badge&logo=javascript)](https://github.com/KenTandrian?tab=repositories&language=javascript)
 [![Nodejs](https://img.shields.io/badge/-Nodejs-black?style=for-the-badge&logo=Node.js)](https://github.com/KenTandrian?tab=repositories&language=javascript)
 [![React](https://img.shields.io/badge/-React-black?style=for-the-badge&logo=react)](https://github.com/KenTandrian?tab=repositories&language=javascript)
-[![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)](https://github.com/KenTandrian?tab=repositories)
+[![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm)](https://github.com/KenTandrian?tab=repositories)
 
 ## Dependencies
 [![react](https://img.shields.io/github/package-json/dependency-version/KenTandrian/notes-app-react/react)](https://www.npmjs.com/package/react)
