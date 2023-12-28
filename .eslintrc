@@ -5,7 +5,7 @@
       "plugin:react/jsx-runtime"
     ],
     "ignorePatterns": [
-      "build",
+      "dist",
       "functions",
       "node_modules"
     ],
