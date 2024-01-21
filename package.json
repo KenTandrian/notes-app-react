@@ -12,10 +12,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "auto-bind": "^5.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-modal": "^3.16.1",
+    "auto-bind": "5.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-modal": "3.16.1",
     "react-toastify": "10.0.3"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "@vitejs/plugin-react": "4.2.1",
     "esbuild": "0.19.11",
     "eslint": "8.56.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react": "7.33.2",
     "gh-pages": "6.1.1",
     "rollup": "4.9.5",
     "vite": "5.0.12",
