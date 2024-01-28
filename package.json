@@ -30,6 +30,6 @@
     "gh-pages": "6.1.1",
     "rollup": "4.9.6",
     "vite": "5.0.12",
-    "web-vitals": "3.5.1"
+    "web-vitals": "3.5.2"
   }
 }
