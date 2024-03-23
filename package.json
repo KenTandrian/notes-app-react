@@ -16,7 +16,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-modal": "3.16.1",
-    "react-toastify": "10.0.4"
+    "react-toastify": "10.0.5"
   },
   "devDependencies": {
     "@swc/core": "1.4.6",
